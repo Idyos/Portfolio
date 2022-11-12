@@ -1,0 +1,58 @@
+.two {
+    padding-left: 5vw;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, 40em);
+    grid-row-gap: 100px;
+    justify-content: start;
+    background: rgb(226, 226, 226);
+    color: rgb(31, 31, 31);
+    align-content: center;
+  }
+  
+  .education {
+      max-width: 475px;
+      padding: 19px;
+      padding-top: 17px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 20px 0px grey;
+  }
+  
+  .education.to_do{
+    opacity: 0.6;
+  }
+  
+  hr {
+    margin: 0;
+    border: none;
+    border-radius: 50px;
+    opacity: 0.8;
+    width: 5px;
+    background: rgb(31, 31, 31);
+    height: 126px;
+  }
+  
+  h3 {
+    display: inline-block;
+    margin: 0;
+    font-weight: 800;
+    font-size: 30px;
+  }
+  
+  h5 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  h6 {
+    margin-top: 37px;
+    font-size: 20px;
+    text-align: end;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+  
+  
+  
+  

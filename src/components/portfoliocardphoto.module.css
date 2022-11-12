@@ -1,0 +1,64 @@
+.portwrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    filter: blur(0px);
+  }
+  
+  .portwrapper:hover .bgimg {
+    display: block;
+    transform: scale(1.2);
+    filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.18, 0.46, 0.36, 1);
+  }
+  
+  .bgimg {
+    image-resolution: 10dpi;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.18, 0.46, 0.36, 1);
+  }
+
+  .tall{
+    height: 100%;
+  }
+
+  .wide{
+    height: 160%;
+  }
+ 
+  
+  .porthover {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: rgb(31, 31, 31);
+    background: rgb(226, 226, 226);
+    position: absolute;
+    filter: blur(20px);
+    transform: scale(1.5);
+    transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+  
+  
+  
+  .porttext {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .porttext h1 {
+    font-size: 70px;
+    margin: 0;
+  }
+  
+  .porttext h5 {
+    font-weight: 200;
+    font-size: 30px;
+    margin: 30px;
+  }
+  

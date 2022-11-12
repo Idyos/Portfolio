@@ -1,0 +1,134 @@
+.four {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    place-items: center;
+  }
+  
+  .form {
+    width: 100%;
+    background: rgb(40, 40, 40);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .formbox {
+    border-radius: 10px;
+    width: 70%;
+    padding: 60px;
+    background-color: rgb(60, 60, 60);
+  }
+  
+  .forminfo {
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    cursor: none;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(226, 226, 226);
+    width: 100%;
+    background: rgb(70, 70, 70);
+    padding: 20px;
+    border-style: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  textarea {
+    cursor: none;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(226, 226, 226);
+    width: 100%;
+    resize: vertical;
+    min-height: 15vh;
+    max-height: 45vh;
+  }
+  
+  ::placeholder {
+    color: rgb(226, 226, 226);
+    opacity: 1;
+  }
+  
+
+  @keyframes fadeInContact {
+    from {
+        transform: rotateZ(0deg) translateX(1000px);
+         opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(2deg) translateY(0px);
+         opacity: 1;
+    }
+}
+
+  .realtime {
+    display: none;
+    border-radius: 10px;
+    text-align: justify;
+    padding: 2vh 3vh;
+    background-color: rgb(70, 70, 70);
+    min-height: 200px;
+    max-height: 500px;
+    width: 500px;
+    word-wrap: break-word;
+    opacity: 0;
+  }
+
+  .realtime.visible{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+    animation: fadeInContact 0.5s cubic-bezier(0, 0, 0.2, 1) both;
+  }
+
+  .realtime .cardinfo{
+    text-align: right;
+  }
+  
+  
+  input[type="submit"] {
+    font-family: "Montserrat", sans-serif;
+    content: none;
+    cursor: none;
+    font-weight: 500;
+    width: 50px;
+    height: 50px;
+    font-size: 3vh;
+    border-radius: 100px;
+    border-style: none;
+    background: linear-gradient(45deg, #7ad0d3, #52efa0);
+    transition: 0.3s cubic-bezier(0.75, 0, 0.25, 1);
+  }
+  
+  input[type="submit"]:hover {
+    width: 50%;
+    height: 8vh;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgb(226, 226, 226);
+  }
+  input:disabled,
+  input[disabled] {
+    width: 30px;
+    height: 30px;
+    background: #cccccc;
+    color: #666666;
+    transition: 0.3s cubic-bezier(0.75, 0, 0.25, 1);
+  }
+  input:disabled:hover,
+  input[disabled]:hover {
+    width: 30px;
+    height: 30px;
+    transform: scale(1);
+    box-shadow: 0px 0px 0px transparent;
+  }
