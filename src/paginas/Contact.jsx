@@ -3,8 +3,6 @@ import "./contact.css";
 
 function Contact() {
   var f;
-  const [title, setTitle] = useState("");
-  const [value, setValue] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -31,20 +29,16 @@ function Contact() {
   }
 
   const handleChange = (e) => {
-    setValue(e.target.value);
     document.getElementById("realtime").classList.add("visible");
 
     switch (e.target.id) {
       case "namec":
-        setTitle("NAME:");
         setName(e.target.value);
         break;
       case "email":
-        setTitle("EMAIL:");
         setEmail(e.target.value);
         break;
       case "message":
-        setTitle("MESSAGE:");
         setMessage(e.target.value);
         break;
       default:
