@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fill, 500px);
   gap: 30px;
   justify-content: center;
+  justify-items: center;
 }
 
 .portGridPhoto {
@@ -15,8 +16,9 @@
 }
 
 .portlist {
-    display: flex;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
   overflow: hidden;
   list-style: none;
 }
@@ -51,7 +53,10 @@
 
 
 @media only screen and (max-width: 768px) {
-   
+  .portGrid{
+      grid-template-columns: repeat(auto-fill, minmax(200px, 138px));
+      padding: 0;
+    }
       
       .portGridPhoto {
         display: grid;
