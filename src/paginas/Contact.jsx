@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./contact.css";
+import { faCertificate } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contact() {
   var f;
@@ -16,6 +18,23 @@ function Contact() {
       }
       document.getElementById("subbut").disabled = !submit;
     }
+  }
+
+  function submitContactForm(e) {
+    e.preventDefault();
+    console.log("HE ENTRADO");
+    document.querySelector(".form").classList.add("hidden");
+    document.querySelector(".realtimewrapper").classList.add("center");
+    setTimeout(() => {
+      document.getElementById("certificate").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("card").style="animation: cardOut 2s ease-in-out;animation-fill-mode: forwards;";
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      }, 1000);
+    }, 1500);
+    
   }
 
   function submitHover() {
@@ -48,7 +67,7 @@ function Contact() {
 
   return (
     <section className="four">
-      <form className="form" name="form">
+      <form className="form" name="form" onSubmitCapture={submitContactForm}>
         <div className="formbox">
           <div className="forminfo">
             <div className="namec">
@@ -108,8 +127,13 @@ function Contact() {
           />
         </div>
       </form>
-      <div className="realtimewrapper">
+      <div className="realtimewrapper" id="card">
         <div id="realtime" className="realtime">
+          <FontAwesomeIcon
+            icon={faCertificate}
+            className="certificateIcon"
+            id="certificate"
+          />
           <div className="cardinfo">
             <h3 className="namecard">{!name ? "Insert your name" : name}</h3>
             <br></br>

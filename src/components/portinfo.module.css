@@ -1,5 +1,5 @@
 .popup {
-  transform-origin: top;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -10,6 +10,7 @@
 }
 
 .popupwrapper {
+  transform-origin: top;
   position: relative;
   display: flex;
   align-items: center;
@@ -18,6 +19,29 @@
   height: 100%;
   background-color: rgba(255, 119, 119, 0.5);
   transform-style: preserve-3d;
+  animation: rotateIn 1s cubic-bezier(0.84, 0.01, 0.68, 1);
+}
+
+.popupwrapper.rotateout{
+  animation: rotateOut 1s cubic-bezier(0.84, 0.01, 0.68, 1);;
+}
+
+@keyframes rotateIn{
+  0%{
+    transform: rotateX(240deg);
+  }
+  100%{
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotateOut{
+  0%{
+    transform: rotateX(360deg);
+  }
+  100%{
+    transform: rotateX(240deg);
+  }
 }
 
 
@@ -30,6 +54,7 @@
 
 .popupdetails{
   height: 100%;
+  width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,8 +69,16 @@
 
 iframe{
     aspect-ratio: 16/9;
-    width: 916px;
+    width: 50%;
     height: auto;
     border-radius: 10px;
     border-style: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  iframe{
+    width: 100%;
+  }
 }

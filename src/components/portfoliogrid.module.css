@@ -54,7 +54,8 @@
 
 @media only screen and (max-width: 768px) {
   .portGrid{
-      grid-template-columns: repeat(auto-fill, minmax(200px, 138px));
+      grid-template-columns: repeat(auto-fill, minmax(170px, 138px));
+      gap: 5px;
       padding: 0;
     }
       

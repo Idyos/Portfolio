@@ -13,7 +13,32 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  visibility: visible;
+  transition: all 1s ease-in-out;
 }
+
+.hidden{
+  transform: translateX(-300px);
+  width: 0%;
+  animation: hideForm 1s ease-in-out;
+}
+
+@keyframes hideForm{
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    
+  }
+}
+
+
+
+
+
+
+
 
 .formbox {
   border-radius: 10px;
@@ -71,12 +96,31 @@ textarea {
 }
 
 .realtimewrapper {
+  animation-fill-mode: forwards;  
   width: 50%;
   display: flex;
   justify-content: center;
+  transition: width 1s ease-in-out;;
+}
+
+.center{
+  width: 100% !important;
+}
+
+@keyframes cardOut{
+0%{
+transform: translateX(0px);
+}
+20%{
+transform: translateX(80px);
+}
+100%{
+  transform: translateX(-2000px);
+}
 }
 
 .realtime {
+  position: relative;
   display: none;
   border-radius: 10px;
   text-align: justify;
@@ -135,6 +179,29 @@ input[disabled]:hover {
   height: 30px;
   transform: scale(1);
   box-shadow: 0px 0px 0px transparent;
+}
+
+.certificateIcon{
+  display: none;
+  position: absolute;
+  color: gold;
+  right: 67%;
+  opacity: 0.6;
+  font-size: 8em;
+  animation: certificate 1s cubic-bezier(0.9, 0, 1, 1);;
+}
+
+@keyframes certificate{
+  from{
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(3);
+  }
+  to{
+    opacity: 0.6;
+    filter: blur(0px);
+    transform: scale(1);
+  }
 }
 
 @media only screen and (max-width: 1200px) {
