@@ -6,6 +6,7 @@ import './portfolio.css';
 function  Portfolio  () {
   const [trigger, setTrigger] = useState(false);
   const [data, setData] = useState();
+  const [allData, setAllData] = useState();
   function PortTextUpdate(title) {
     var allcontent = document.querySelectorAll(".t");
     var alltitle = document.querySelectorAll(".porttitle");
@@ -25,7 +26,7 @@ function  Portfolio  () {
   return (
     
     <section className="three" >
-      <PortInfo trigger={trigger} setTrigger={setTrigger} data={data}/>
+      <PortInfo trigger={trigger} setTrigger={setTrigger} data={data} completeData={allData}/>
       <nav className="portfolionav">
         <h5 className="porttitle selected" onClick={() => {PortTextUpdate(0)}}>
           Video
@@ -40,7 +41,7 @@ function  Portfolio  () {
           3D
         </h5>
       </nav>
-      <div className="t video a"><PortfolioGrid type="1" setTrigger={setTrigger} setData={setData}/></div>
+      <div className="t video a"><PortfolioGrid type="1" setTrigger={setTrigger} setData={setData} setAllData={setAllData}/></div>
       <div className="t photo"><PortfolioGrid type="2" setTrigger={setTrigger} setData={setData}/></div>
       <div className="t design">DESIGN</div>
       <div className="t threed">3D</div>
