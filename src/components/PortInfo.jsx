@@ -21,7 +21,6 @@ function PortInfo(props) {
     }
   }, [props.trigger]);
 
-  console.log(props);
   if (props.trigger === true) {
     switch (props.dataType) {
       default:
@@ -122,7 +121,7 @@ function PortInfo(props) {
                       style={{ display: "flex", justifyContent: "center" }}
                     >
                       <div className={styles.popupdetails}>
-                        <img src={data.file} alt={data.description} style={{maxWidth: "80%", maxHeight: "90%"}}/>
+                        <img src={data.file} alt={data.description} style={{maxWidth: "100%", maxHeight: "90%"}}/>
                       </div>
                     </SwiperSlide>
                   );
@@ -131,6 +130,8 @@ function PortInfo(props) {
             </div>
           </div>
         );
+        case 2:
+          
     }
   }
 }

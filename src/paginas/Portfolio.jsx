@@ -3,21 +3,22 @@ import PortfolioGrid from '../components/PortfolioGrid';
 import PortInfo from '../components/PortInfo';
 import './portfolio.css';
 
-function  Portfolio  () {
+function  Portfolio  (props) {
+  const [type, setType] = useState(1);
   const [trigger, setTrigger] = useState(false);
   const [data, setData] = useState();
   const [allData, setAllData] = useState();
   const [dataType, setDataType] = useState();
   function PortTextUpdate(title) {
-    var allcontent = document.querySelectorAll(".t");
+    console.log(props);
     var alltitle = document.querySelectorAll(".porttitle");
 
-    for (let i = 0; i < allcontent.length; i++) {
-      if (title === i) {
-        allcontent[i].classList.add("a");
+    for (let i = 0; i < 4; i++) {
+      if (title === i) { 
         alltitle[i].classList.add("selected");
+       setType(title+1);
+       props.secUpdate(!props.sec);
       } else {
-        allcontent[i].classList.remove("a");
         alltitle[i].classList.remove("selected");
       }
     }
@@ -42,10 +43,7 @@ function  Portfolio  () {
           3D
         </h5>
       </nav>
-      <div className="t video a"><PortfolioGrid type="1" setTrigger={setTrigger} setData={setData} setAllData={setAllData} setDataType={setDataType}/></div>
-      <div className="t photo"><PortfolioGrid type="2" setTrigger={setTrigger} setData={setData} setAllData={setAllData} setDataType={setDataType}/></div>
-      <div className="t design">DESIGN</div>
-      <div className="t threed">3D</div>
+      <div className="t a"><PortfolioGrid type={type} setTrigger={setTrigger} setData={setData} setAllData={setAllData} setDataType={setDataType}/></div>
     </section>
   );
 }

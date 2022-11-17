@@ -1,21 +1,24 @@
 import "./general.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import IntIsland from "./components/InteractiveIsland";
 import Home from "./paginas/Home";
 import Education from "./paginas/Education";
 import Portfolio from "./paginas/Portfolio";
 import Contact from "./paginas/Contact";
 import { gsap } from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScrollDirection } from "react-use-scroll-direction";
 
 function App() {
+  const [checkPortfolio, setCheckPortfolio] = useState(false);
   const pageRef = React.createRef();
   const cursor = useRef();
   const follower = useRef();
 
   // DETECTAR DIRECCIÓN DEL SCROLL ///////////////////////////////////////////////////////////////////////////////////
-    const { isScrollingUp, isScrollingDown } = useScrollDirection();
-    //console.log(isScrollingUp);
+  const { isScrollingUp, isScrollingDown } = useScrollDirection();
+  //console.log(isScrollingUp);
   // MOVIMIENTO DEL MOUSE ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   var posX = 0,
     posY = 0,
@@ -66,7 +69,6 @@ function App() {
 
   useEffect(() => {
     const lista = document.querySelectorAll("#listaportfolio");
-    
     jRef.current.addEventListener("mouseenter", function () {
       cursor.current.classList.add("active");
       follower.current.classList.add("active");
@@ -88,24 +90,26 @@ function App() {
         follower.current.classList.remove("activeport");
       });
     }
-  });
+  }, [checkPortfolio]);
 
   return (
-    
+
     <>
       <div className="cursor" id="cursor" ref={cursor}></div>
       <div
         className="cursor-follower"
         id="cursor-follower"
         ref={follower}
-      ></div>
-            {isScrollingUp && "Up"}
+      >
+        <FontAwesomeIcon icon={faArrowRight} className="cursoricon" />
+      </div>
+      {isScrollingUp && "Up"}
       {isScrollingDown && "Down"}
       <IntIsland reference={pageRef} />
       <div className="todo" id="todo" ref={pageRef}>
         <Home reference={jRef} />
         <Education />
-        <Portfolio />
+        <Portfolio secUpdate={setCheckPortfolio} sec={checkPortfolio} />
         <Contact />
       </div>
     </>

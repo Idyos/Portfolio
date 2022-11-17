@@ -90,7 +90,7 @@ export const portfolio = [
         "dimensions": "wide",
       },
       {
-        "id": 5,
+        "id": 10,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/2-2 1.jpg"),
@@ -99,7 +99,7 @@ export const portfolio = [
         "dimensions": "ultrawide",
       },
       {
-        "id": 10,
+        "id": 11,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_2831.jpg"),
@@ -108,7 +108,7 @@ export const portfolio = [
         "dimensions": "tall",
       },
       {
-        "id": 11,
+        "id": 12,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_3571-2.jpg"),
@@ -117,7 +117,7 @@ export const portfolio = [
         "dimensions": "wide",
       },
       {
-        "id": 12,
+        "id": 13,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_4353.jpg"),
@@ -126,7 +126,7 @@ export const portfolio = [
         "dimensions": "tall",
       },
       {
-        "id": 13,
+        "id": 14,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_5395.jpg"),
@@ -135,7 +135,7 @@ export const portfolio = [
         "dimensions": "tall",
       },
       {
-        "id": 14,
+        "id": 15,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_5444.jpg"),
@@ -144,7 +144,7 @@ export const portfolio = [
         "dimensions": "wide",
       },
       {
-        "id": 15,
+        "id": 16,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_5489.jpg"),
@@ -153,7 +153,7 @@ export const portfolio = [
         "dimensions": "wide",
       },
       {
-        "id": 16,
+        "id": 17,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_6443.jpg"),
@@ -162,7 +162,7 @@ export const portfolio = [
         "dimensions": "tall",
       },
       {
-        "id": 17,
+        "id": 18,
         "description": "blablabla",
         "link": "",
         "file": require("../portfolio/photos/IMG_7315.jpg"),
