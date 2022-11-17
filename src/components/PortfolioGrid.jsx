@@ -20,7 +20,7 @@ const childToParent = () => {
           
           {portfolio[0].video.map((info, index) => {
             return (
-              <li key={info.id} className={styles.portlist} id="listaportfolio" onClick={() => {props.setTrigger(true); props.setData(info); props.setAllData(portfolio[0].video)}}>
+              <li key={info.id} className={styles.portlist} id="listaportfolio" onClick={() => {props.setTrigger(true); props.setData(info); props.setAllData(portfolio[0].video); props.setDataType(0)}}>
                 <PortfolioCard  valor={info} />
               </li>
             );
@@ -32,7 +32,7 @@ const childToParent = () => {
         <ul className={styles.portGridPhoto}>
           {portfolio[1].photography.map((info) => {
             return (
-              <li key={info.id} id="listaportfolio" onClick={() => {props.setTrigger(true); props.setData(info)}} className={`${styles.portlist} ${info.dimensions==="ultrawide" ? styles.ultrawide : info.dimensions==="wide" ? styles.wide : styles.tall}`} ref={photoItem} >
+              <li key={info.id} id="listaportfolio" onClick={() => {props.setTrigger(true); props.setData(info); props.setAllData(portfolio[1].photography); props.setDataType(1)}} className={`${styles.portlist} ${info.dimensions==="ultrawide" ? styles.ultrawide : info.dimensions==="wide" ? styles.wide : styles.tall}`} ref={photoItem} >
                 <PortfolioCardPhoto  valor={info} childToParent={childToParent}/>
               </li>
             );

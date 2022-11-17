@@ -15,7 +15,7 @@ function App() {
 
   // DETECTAR DIRECCIÓN DEL SCROLL ///////////////////////////////////////////////////////////////////////////////////
     const { isScrollingUp, isScrollingDown } = useScrollDirection();
-    console.log(isScrollingUp);
+    //console.log(isScrollingUp);
   // MOVIMIENTO DEL MOUSE ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   var posX = 0,
     posY = 0,
@@ -92,7 +92,7 @@ function App() {
 
   return (
     
-    <div>
+    <>
       <div className="cursor" id="cursor" ref={cursor}></div>
       <div
         className="cursor-follower"
@@ -108,7 +108,7 @@ function App() {
         <Portfolio />
         <Contact />
       </div>
-    </div>
+    </>
   );
 }
 
