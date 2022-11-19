@@ -83,11 +83,13 @@ function App() {
       lista[i].addEventListener("mouseenter", function () {
         cursor.current.classList.add("activeport");
         follower.current.classList.add("activeport");
+        document.querySelector(".cursoricon").style.opacity=1;
       });
 
       lista[i].addEventListener("mouseleave", function () {
         cursor.current.classList.remove("activeport");
         follower.current.classList.remove("activeport");
+        document.querySelector(".cursoricon").style.opacity=0;
       });
     }
   }, [checkPortfolio]);
@@ -101,7 +103,7 @@ function App() {
         id="cursor-follower"
         ref={follower}
       >
-        <FontAwesomeIcon icon={faArrowRight} className="cursoricon" />
+        <FontAwesomeIcon icon={faArrowRight} className="cursoricon" style={{color: "black", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%) rotateZ(-45deg)", opacity: 0, transition: "opacity 0.3s ease-in-out" }}/>
       </div>
       {isScrollingUp && "Up"}
       {isScrollingDown && "Down"}

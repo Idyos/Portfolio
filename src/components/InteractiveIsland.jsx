@@ -5,12 +5,24 @@ import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
-import  styles from "./interactiveIsland.module.css";
+import styles from "./interactiveIsland.module.css";
 import React from "react";
+import { gsap } from "gsap";
+import { useEffect } from "react";
 
-function IntIsland({reference}) {
+function IntIsland({ reference }) {
 
-
+  useEffect(() => {
+    gsap.to(("#icon1"), {
+      y: 100,
+      duration: 2,
+      ease: "bounce",
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".one"
+      }
+    })
+  })
 
 
 
@@ -36,25 +48,26 @@ function IntIsland({reference}) {
 
   return (
     <div className={styles.island2}>
-      <FontAwesomeIcon icon={faAnglesUp} className={styles.updown}/>
+      <FontAwesomeIcon icon={faAnglesUp} className={styles.updown} />
       <FontAwesomeIcon
         icon={faHouseUser}
-        onClick={()=>{pressToScroll(0)}}
+        onClick={() => { pressToScroll(0) }}
         className={styles.position}
+        id="icon1"
       />
       <FontAwesomeIcon
         icon={faSchool}
-        onClick={()=>{pressToScroll(1)}}
+        onClick={() => { pressToScroll(1) }}
       />
       <FontAwesomeIcon
         icon={faBook}
-        onClick={()=>{pressToScroll(2)}}
+        onClick={() => { pressToScroll(2) }}
       />
       <FontAwesomeIcon
         icon={faAddressCard}
-        onClick={()=>{pressToScroll(3)}}
+        onClick={() => { pressToScroll(3) }}
       />
-      <FontAwesomeIcon icon={faAnglesDown} className={styles.updown}/>
+      <FontAwesomeIcon icon={faAnglesDown} className={styles.updown} />
     </div>
   );
 }

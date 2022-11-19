@@ -33,7 +33,7 @@ function PortfolioGrid(props) {
           {portfolio[1].photography.map((info) => {
             return (
               <li key={info.id} id="listaportfolio" onClick={() => { props.setTrigger(true); props.setData(info); props.setAllData(portfolio[1].photography); props.setDataType(1) }} className={`${styles.portlist} ${info.dimensions === "ultrawide" ? styles.ultrawide : info.dimensions === "wide" ? styles.wide : styles.tall}`} ref={photoItem} >
-                <PortfolioCardPhoto valor={info} childToParent={childToParent} />
+                <PortfolioCardPhoto rel="preload" valor={info} childToParent={childToParent} />
               </li>
             );
           })}
