@@ -1,10 +1,11 @@
 import styles from "./portinfo.module.css";
+import "./swiperstyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 // Import Swiper React components
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,7 +13,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 function PortInfo(props) {
   useEffect(() => {
@@ -46,15 +46,13 @@ function PortInfo(props) {
               <Swiper
                 style={{ height: "100%" }}
                 initialSlide={props.data.id - 1}
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                loop={true}
+                modules={[Navigation, Pagination, A11y]}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
-                //onSwiper={(swiper) => console.log(swiper)}
-                //onSlideChange={() => console.log("slide change")}
               >
-                {props.completeData.map((data, index) => {
+                {props.completeData.map((data) => {
                   return (
                     <SwiperSlide
                       key={data.id}
@@ -106,15 +104,13 @@ function PortInfo(props) {
               <Swiper
                 style={{ height: "100%" }}
                 initialSlide={props.data.id - 6}
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                loop={true}
+                modules={[Navigation, Pagination, A11y]}
                 slidesPerView={1}
                 navigation
-                pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
-                //onSwiper={(swiper) => console.log(swiper)}
-                //onSlideChange={() => console.log("slide change")}
+                pagination={{ clickable: true, dynamicBullets: true, dynamicMainBullets: 3 }}
               >
-                {props.completeData.map((data, index) => {
+                {props.completeData.map((data) => {
                   return (
                     <SwiperSlide
                       key={data.id}

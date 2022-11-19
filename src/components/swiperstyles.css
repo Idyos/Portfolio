@@ -1,0 +1,66 @@
+.swiper-button-prev {
+    background-color: white;
+    padding: 30px;
+    transform: scale(0.5);
+    font-size: 5px;
+    border-radius: 100px;
+    color: black !important;
+    transition: 0.2s all ease-in-out;
+    left: 5vh !important;
+    cursor: none !important;
+}
+
+.swiper-button-prev::after {
+    font-weight: bold;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+
+.swiper-button-prev:hover {
+    transform: scale(1.5);
+    transition: 0.2s all ease-in-out;
+}
+
+.swiper-button-prev:hover.swiper-button-prev::after {
+    opacity: 1;
+    transition: 0.2s all ease-in-out;
+}
+
+.swiper-button-next {
+    background-color: white;
+    padding: 30px;
+    transform: scale(0.5);
+    font-size: 5px;
+    border-radius: 100px;
+    color: black !important;
+    transition: 0.2s all ease-in-out;
+    right: 5vh !important;
+    cursor: none !important;
+}
+
+.swiper-button-next::after {
+    font-weight: bold;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+
+.swiper-button-next:hover {
+    transform: scale(1.5);
+    transition: 0.2s all ease-in-out;
+}
+
+.swiper-button-next:hover.swiper-button-next::after {
+    opacity: 1;
+    transition: 0.2s all ease-in-out;
+}
+
+
+
+.swiper-pagination-bullet-active{
+    background: white !important;
+} 
+

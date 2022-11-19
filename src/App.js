@@ -12,6 +12,7 @@ import { useScrollDirection } from "react-use-scroll-direction";
 
 function App() {
   const [checkPortfolio, setCheckPortfolio] = useState(false);
+  const portfolioUpdate = useRef();
   const pageRef = React.createRef();
   const cursor = useRef();
   const follower = useRef();
@@ -111,7 +112,7 @@ function App() {
       <div className="todo" id="todo" ref={pageRef}>
         <Home reference={jRef} />
         <Education />
-        <Portfolio secUpdate={setCheckPortfolio} sec={checkPortfolio} />
+        <Portfolio secUpdate={setCheckPortfolio} sec={checkPortfolio} ref={portfolioUpdate} />
         <Contact />
       </div>
     </>

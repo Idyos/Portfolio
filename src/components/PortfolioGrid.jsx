@@ -3,6 +3,7 @@ import styles from "./portfoliogrid.module.css";
 import PortfolioCardPhoto from "./PortfolioCardPhoto";
 import { useRef } from "react";
 import PortfolioCard from "./PortfolioCard";
+import { useEffect } from "react";
 
 function PortfolioGrid(props) {
   const photoItem = useRef();
@@ -11,12 +12,16 @@ function PortfolioGrid(props) {
     photoItem.current.classList.add(styles.wide);
   }
 
+  useEffect(() => {
+    console.log(props.ref);
+  })
+
 
   switch (props.type) {
     case 1:
       return (
 
-        <ul className={styles.portGrid} >
+        <ul ref={props.ref} className={styles.portGrid} >
 
           {portfolio[0].video.map((info, index) => {
             return (
@@ -29,10 +34,10 @@ function PortfolioGrid(props) {
       );
     case 2:
       return (
-        <ul className={styles.portGridPhoto}>
+        <ul ref={props.ref} className={styles.portGridPhoto}>
           {portfolio[1].photography.map((info) => {
             return (
-              <li key={info.id} id="listaportfolio" onClick={() => { props.setTrigger(true); props.setData(info); props.setAllData(portfolio[1].photography); props.setDataType(1) }} className={`${styles.portlist} ${info.dimensions === "ultrawide" ? styles.ultrawide : info.dimensions === "wide" ? styles.wide : styles.tall}`} ref={photoItem} >
+              <li key={info.id}  id="listaportfolio" onClick={() => { props.setTrigger(true); props.setData(info); props.setAllData(portfolio[1].photography); props.setDataType(1) }} className={`${styles.portlist} ${info.dimensions === "ultrawide" ? styles.ultrawide : info.dimensions === "wide" ? styles.wide : styles.tall}`} ref={photoItem} >
                 <PortfolioCardPhoto rel="preload" valor={info} childToParent={childToParent} />
               </li>
             );

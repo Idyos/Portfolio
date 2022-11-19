@@ -14,12 +14,12 @@ function IntIsland({ reference }) {
 
   useEffect(() => {
     gsap.to(("#icon1"), {
-      y: 100,
+      top: "20%",
       duration: 2,
-      ease: "bounce",
+      ease: "ease-in-out",
       delay: 1,
       scrollTrigger: {
-        trigger: ".one"
+        trigger: ".three"
       }
     })
   })
