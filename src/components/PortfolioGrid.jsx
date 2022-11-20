@@ -21,7 +21,7 @@ function PortfolioGrid(props) {
     case 1:
       return (
 
-        <ul ref={props.ref} className={styles.portGrid} >
+        <ul className={styles.portGrid} >
 
           {portfolio[0].video.map((info, index) => {
             return (
@@ -34,7 +34,7 @@ function PortfolioGrid(props) {
       );
     case 2:
       return (
-        <ul ref={props.ref} className={styles.portGridPhoto}>
+        <ul className={styles.portGridPhoto}>
           {portfolio[1].photography.map((info) => {
             return (
               <li key={info.id}  id="listaportfolio" onClick={() => { props.setTrigger(true); props.setData(info); props.setAllData(portfolio[1].photography); props.setDataType(1) }} className={`${styles.portlist} ${info.dimensions === "ultrawide" ? styles.ultrawide : info.dimensions === "wide" ? styles.wide : styles.tall}`} ref={photoItem} >

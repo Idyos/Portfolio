@@ -43,7 +43,7 @@ function  Portfolio  (props) {
           3D
         </h5>
       </nav>
-      <div className="t a"><PortfolioGrid type={type} setTrigger={setTrigger} setData={setData} setAllData={setAllData} setDataType={setDataType} ref={props.ref}/></div>
+      <div className="t a"><PortfolioGrid type={type} setTrigger={setTrigger} setData={setData} setAllData={setAllData} setDataType={setDataType}/></div>
     </section>
   );
 }

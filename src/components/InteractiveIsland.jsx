@@ -9,19 +9,21 @@ import styles from "./interactiveIsland.module.css";
 import React from "react";
 import { gsap } from "gsap";
 import { useEffect } from "react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function IntIsland({ reference }) {
 
   useEffect(() => {
-    gsap.to(("#icon1"), {
+    /*gsap.to(("#icon1"), {
       top: "20%",
       duration: 2,
       ease: "ease-in-out",
       delay: 1,
       scrollTrigger: {
-        trigger: ".three"
+        trigger: ".two"
       }
-    })
+    })*/
   })
 
 

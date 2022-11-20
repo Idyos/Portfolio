@@ -1,92 +1,93 @@
-.island2{
-    z-index: 1;
-    position: fixed;
-    right: 9%;
-    bottom: 45vh;
-    overflow: hidden;
-    display: flex;
-    background: rgb(255, 73, 73);
-    height: 9vh;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 9vh;
-    border-radius: 50px;
-    box-shadow: 3px 3px 20px black, 2px 2px 20px 0px white;
-    flex-direction: column;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .island2:hover{
-    bottom: 35%;
-    height: 30vh;
-    box-shadow: 3px 3px 20px black, 12px 16px 0px 0px white;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.island2 {
+  z-index: 1;
+  position: fixed;
+  right: 9%;
+  bottom: 45vh;
+  overflow: hidden;
+  display: flex;
+  background: rgb(255, 73, 73);
+  height: 9vh;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 9vh;
+  border-radius: 50px;
+  box-shadow: 3px 3px 20px black, 2px 2px 20px 0px white;
+  flex-direction: column;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .island2:hover  svg{
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.island2:hover {
+  bottom: 35%;
+  height: 30vh;
+  box-shadow: 3px 3px 20px black, 12px 16px 0px 0px white;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .island2:hover  svg:nth-child(2){
-    top: 10%;
-   
-  }
+.island2:hover svg {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .island2:hover  svg:nth-child(3){
-    top: 33%;
-    transition-delay: 0.05s;
-  }
+.island2:hover svg:nth-child(2) {
+  top: 10%;
+}
 
-  .island2:hover  svg:nth-child(4){
-    bottom: 33%;
-    transition-delay: 0.1s;
-  }
-  
-  .island2:hover  svg:nth-child(5){
-    bottom: 10%;
-    transition-delay: 0.15s;
-  }
+.island2:hover svg:nth-child(3) {
+  top: 33%;
+  transition-delay: 0.05s;
+}
 
+.island2:hover svg:nth-child(4) {
+  bottom: 33%;
+  transition-delay: 0.1s;
+}
 
-  .island2 svg{
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    font-size: 30px;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.island2:hover svg:nth-child(5) {
+  bottom: 10%;
+  transition-delay: 0.15s;
+}
 
-  .island2 svg:nth-child(2){
-    top: 40%;
-  }
+.island2 svg {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 30px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .island2 svg:nth-child(3){
-    top: 40%;
-  }
+.island2 svg:nth-child(2) {
+  top: 40%;
+}
 
-  .island2 svg:nth-child(4){
-    bottom: 40%;
-  }
+.island2 svg:nth-child(3) {
+  top: 40%;
+}
 
-  .island2 svg:nth-child(5){
-    bottom: 40%;
-  }
+.island2 svg:nth-child(4) {
+  bottom: 40%;
+}
 
+.island2 svg:nth-child(5) {
+  bottom: 40%;
+}
 
+.island2:hover svg.updown {
+  opacity: 0;
+  display: none;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.island2 svg.position {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 30%;
+}
 
-  .island2:hover  svg.updown{
-    opacity: 0;
+@media only screen and (max-width: 768px) {
+  .island2 {
     display: none;
-    position: relative;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
-  .island2 svg.position{
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    top: 30%;
-  }
+}
