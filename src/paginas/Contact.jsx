@@ -2,8 +2,10 @@ import { useState } from "react";
 import "./contact.css";
 import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useForm, ValidationError } from "@formspree/react";
 
 function Contact() {
+  const [state, handleSubmit] = useForm("mlevvbwk");
   var f;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,19 +24,18 @@ function Contact() {
 
   function submitContactForm(e) {
     e.preventDefault();
-    console.log("HE ENTRADO");
     document.querySelector(".form").classList.add("hidden");
     document.querySelector(".realtimewrapper").classList.add("center");
     setTimeout(() => {
       document.getElementById("certificate").style.display = "block";
       setTimeout(() => {
-        document.getElementById("card").style="animation: cardOut 2s ease-in-out;animation-fill-mode: forwards;";
+        document.getElementById("card").style =
+          "animation: cardOut 2s ease-in-out;animation-fill-mode: forwards;";
         setTimeout(() => {
           window.location.reload();
         }, 2000);
       }, 1000);
     }, 1500);
-    
   }
 
   function submitHover() {
@@ -67,11 +68,16 @@ function Contact() {
 
   return (
     <section className="four">
-      <form className="form" name="form" onSubmitCapture={submitContactForm}>
+      <form
+        className="form"
+        name="form"
+        onSubmit={handleSubmit}
+        onSubmitCapture={submitContactForm}
+      >
         <div className="formbox">
           <div className="forminfo">
             <div className="namec">
-              <label htmlFor="namec">Name:</label>
+              <label htmlFor="name">Name:</label>
               <br />
               <input
                 onInput={() => {
@@ -81,6 +87,7 @@ function Contact() {
                 id="namec"
                 value={name}
                 placeholder="Name"
+                name="name"
                 onChange={handleChange}
               />
               <br />
@@ -117,6 +124,11 @@ function Contact() {
               <br />
               <br />
             </div>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
           <input
             id="subbut"

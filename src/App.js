@@ -68,7 +68,6 @@ function App() {
   });
 
   useEffect(() => {
-    const lista = document.querySelectorAll("#listaportfolio");
     jRef.current.addEventListener("mouseenter", function () {
       cursor.current.classList.add("active");
       follower.current.classList.add("active");
@@ -78,6 +77,11 @@ function App() {
       cursor.current.classList.remove("active");
       follower.current.classList.remove("active");
     });
+
+  })
+
+  useEffect(() => {
+    const lista = document.querySelectorAll("#listaportfolio");
 
     for (var i = 0; i < lista.length; i++) {
       lista[i].addEventListener("mouseenter", function () {

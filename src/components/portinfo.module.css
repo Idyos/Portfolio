@@ -52,7 +52,7 @@
 
 .popupdetails{
   height: 100%;
-  width: 80vw;
+  width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +60,8 @@
 }
 
 .popupinfo{
+  text-align: center;
+  padding: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;

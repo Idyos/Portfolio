@@ -14,6 +14,11 @@ function Home({reference}) {
       <p className="j" ref={reference}>J</p>
       <div className="line"></div>
       <div className="info">
+        <div className="imagewrapper">
+          <div className="frame">
+            <img src={require('../portfolio/profilepicture/Foto 1 final.jpg')} alt="My Face"/>
+          </div>
+        </div>
         <h1 className="hi">Hi!</h1>
         <p className="name">I'm Javi Gauxachs Monserrat</p>
         <p className="about">

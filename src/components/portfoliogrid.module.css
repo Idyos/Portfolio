@@ -61,7 +61,7 @@
       
       .portGridPhoto {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(183px, 210px));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 170px));
         gap: 20px;
         grid-auto-flow: dense;
         padding: 0;

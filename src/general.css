@@ -201,4 +201,7 @@ svg{
   .cursor-follower{
     display: none;
   }
+  ::-webkit-scrollbar{
+    display: none;
+  }
 }
