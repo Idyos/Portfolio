@@ -22,7 +22,7 @@ function Home({reference}) {
         <h1 className="hi">Hi!</h1>
         <p className="name">I'm Javi Gauxachs Monserrat</p>
         <p className="about">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          I'm a dev ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eget malesuada magna, in auctor felis. Donec et ipsum sapien.
         </p>
       </div>
